@@ -8,7 +8,7 @@ from scipy.stats import f_oneway
 
 def run():
     st.markdown("<h1 style='text-align: center; color: #FF6347;'>Pengaruh Jenis Bahan Bakar terhadap Emisi CO2</h1>", unsafe_allow_html=True)
-
+    st.header('\n')
     st.subheader('Analisis Perbandingan Bahan Bakar Regular Gasoline, Premium Gasoline, Diesel and Ethanol')
     st.write('by :  [Muhammad Daffa Miqoilla](https://www.linkedin.com/in/muhammad-daffa-miqoilla-2b17aa282/)')
     st.caption('E-mail : Miqoilla@gmail.com')
@@ -29,7 +29,6 @@ def run():
     Selain itu, penting untuk memahami dampak jenis bahan bakar terhadap emisi CO2. Dalam industri otomotif, terdapat beberapa jenis bahan bakar umum, seperti bensin reguler, bensin premium, diesel, dan etanol. Setiap jenis bahan bakar memiliki karakteristik yang berbeda dan dapat mempengaruhi tingkat emisi CO2 yang dihasilkan oleh kendaraan. Analisis perbandingan antara jenis bahan bakar ini dapat memberikan wawasan yang berharga tentang dampak lingkungan yang dihasilkan oleh masing-masing jenis bahan bakar.
     ''')
 
-    st.header('\n')
 
     st.header('Dataset CO2 Emissions')
     st.dataframe(df)
