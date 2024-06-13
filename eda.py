@@ -7,8 +7,9 @@ from plotly.subplots import make_subplots
 from scipy.stats import f_oneway
 
 def run():
+
     st.markdown("<h1 style='text-align: center; color: #FF6347;'>Pengaruh Jenis Bahan Bakar terhadap Emisi CO2</h1>", unsafe_allow_html=True)
-    st.header('\n')
+    
     st.subheader('Analisis Perbandingan Bahan Bakar Regular Gasoline, Premium Gasoline, Diesel and Ethanol')
     st.write('by :  [Muhammad Daffa Miqoilla](https://www.linkedin.com/in/muhammad-daffa-miqoilla-2b17aa282/)')
     st.caption('E-mail : Miqoilla@gmail.com')
@@ -29,17 +30,20 @@ def run():
     Selain itu, penting untuk memahami dampak jenis bahan bakar terhadap emisi CO2. Dalam industri otomotif, terdapat beberapa jenis bahan bakar umum, seperti bensin reguler, bensin premium, diesel, dan etanol. Setiap jenis bahan bakar memiliki karakteristik yang berbeda dan dapat mempengaruhi tingkat emisi CO2 yang dihasilkan oleh kendaraan. Analisis perbandingan antara jenis bahan bakar ini dapat memberikan wawasan yang berharga tentang dampak lingkungan yang dihasilkan oleh masing-masing jenis bahan bakar.
     ''')
 
+    st.markdown("<br>", unsafe_allow_html=True)
 
     st.header('Dataset CO2 Emissions')
     st.dataframe(df)
     st.caption("Data Source: The data has been taken and compiled from the [Canada Goverment](https://open.canada.ca/data/en/dataset/98f1a129-f628-4ce4-b24d-6f16bf24dd64#wb-auto-6) official link ")
-    st.header('\n')
+    st.markdown("<br>", unsafe_allow_html=True)
+
 
     total,year= st.columns(2)
 
     # Visualisasi brand
     table_brand1, table_brand2 = st.columns([1,1])
-    st.header('\n')
+    st.markdown("<br>", unsafe_allow_html=True)
+
    
     with table_brand1: 
         st.subheader('Top 10 Brand Mobil yang paling banyak digunakan')
@@ -73,13 +77,11 @@ def run():
         diikuti dengan **Ethanol** 368 pemakaian dan **Deisel** yang hanya 174 pemakaian''')
 
 
-
-    
-    st.header('Hubungan antara Jenis Bahan bakar, Banyaknya Konsumsi Bahan Bakar dan Kapasitas Mesin Terhadap Emisi CO2')
+    st.markdown("<h2>Korelasi antara jenis bahan bakar, konsumsi, dan kapasitas mesin terhadap emisi CO2.</h2>", unsafe_allow_html=True)
     table_fuel1, table_fuel2 = st.columns([1,1])
     st.header('\n')
+
    
-    
 
     with table_fuel1: 
         st.subheader('Top 5 brand yang menghasilkan Emisi CO2 paling banyak')
@@ -180,7 +182,8 @@ def run():
 
     one,two,three = st.columns([1,2,1])
     with two:
-        st.header('\n')
+        st.markdown("<br>", unsafe_allow_html=True)
+
         st.markdown("<h1 style='text-align: center;'>Recommendation</h1>", unsafe_allow_html=True)
         st.write('''Demi menjawab tantangan untuk mengurangi tingkat emisi gas karbon dioksida (CO2) hal yang paling efektif adalah dengan cara mengganti kendaraan yang digunakan dari kendaraan konvensional menjadi kendaraan bermotor listrik, 
         namun tidak semua orang dapat membeli kendaraan bermotor listrik dikarenakan harganya yang cenderung lebih mahal dibandingkan kendaraan konvensional,
