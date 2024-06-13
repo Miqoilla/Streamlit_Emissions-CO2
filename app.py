@@ -22,7 +22,7 @@ st.sidebar.markdown("---")
 st.sidebar.title('Main Menu') 
 
 # Pilihan halaman
-navigation = st.sidebar.selectbox('Pilih Halaman : ', ('Insight Analysis', 'predictions', 'Chatbot'))
+navigation = st.sidebar.selectbox('Pilih Halaman : ', ('Insight Analysis', 'Predictions', 'Chatbot'))
 
 # Tambahkan garis pembatas di antara judul dan pilihan halaman
 st.sidebar.markdown("---")
@@ -30,7 +30,7 @@ st.sidebar.markdown("---")
 # Tampilkan halaman terkait berdasarkan pilihan navigasi
 if navigation == 'Insight Analysis':
     eda.run()
-elif navigation == 'predictions':
+elif navigation == 'Predictions':
     model.run()
 elif navigation == 'Chatbot':
     chatbot.run()
