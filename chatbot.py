@@ -1,11 +1,17 @@
 import streamlit as st
 import os
-from groq import Groq
+import requests
 from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
-from langchain_groq import ChatGroq
-import requests
-from streamlit_lottie import st_lottie
+
+# Coba import paket yang mungkin tidak tersedia
+try:
+    from groq import Groq
+    from langchain_groq import ChatGroq
+    from streamlit_lottie import st_lottie
+except ImportError as e:
+    st.error(f"Error importing required package: {e}")
+    st.stop()
 
 def load_lottieurl(url: str):
     r = requests.get(url)
@@ -15,13 +21,14 @@ lottie_animation = load_lottieurl("https://lottie.host/dac3b166-9a41-4c33-8c08-c
 
 def run():
     st.title("Hai Sobat Mojadiapp")
+    
     groq_api_key = os.environ.get('GROQ_API_KEY')
     if not groq_api_key:
         st.error("Variabel lingkungan GROQ_API_KEY tidak diatur.")
         return
 
     if lottie_animation:
-       st_lottie(lottie_animation, height=450, key="chatbot")
+        st_lottie(lottie_animation, height=450, key="chatbot")
 
     st.write("Saya adalah Chatbot, asisten virtual Anda yang ramah dan siap membantu dengan cepat. Apakah Anda memiliki pertanyaan, butuh informasi, atau ingin sekadar mengobrol? Mari kita mulai percakapan yang seru ini!")
 
