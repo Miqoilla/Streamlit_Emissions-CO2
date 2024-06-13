@@ -22,7 +22,7 @@ def run():
     st.title("Hai Sobat Mojadiapp 🫰")
     lottie_animation = load_lottieurl("https://lottie.host/dac3b166-9a41-4c33-8c08-cf1088b884f9/DDy8St12vV.json")
     if lottie_animation:
-        st_lottie(lottie_animation, height=400)
+        st_lottie(lottie_animation, height=360)
 
     # Sidebar untuk memasukkan API key Groq dan kustomisasi
     with st.sidebar:
