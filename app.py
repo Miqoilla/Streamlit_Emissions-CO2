@@ -4,7 +4,7 @@ import eda
 import model
 
 # Masukkan path file gambar logo Anda di sini
-LOGO_FILE = "image/logo1.png"
+LOGO_FILE = "logo1.png"
 
 # Tampilkan logo dengan tautan ke App Gallery
 st.logo(LOGO_FILE, link="https://mojadiapp.com/", icon_image=LOGO_FILE)
