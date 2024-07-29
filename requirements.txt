@@ -12,3 +12,4 @@ requests
 scipy
 langchain
 langchain-groq
+pydantic==2.6.1
