@@ -10,6 +10,6 @@ streamlit-lottie
 Pillow
 requests
 scipy
-langchain
+langchain==0.1.5
 langchain-groq
 pydantic==2.6.1
