@@ -86,7 +86,7 @@ networkx==3.2.1
 nltk==3.8.1
 notebook==6.5.1
 notebook_shim==0.2.0
-numpy    
+numpy
 openai==1.12.0
 packaging==23.2
 pandocfilters==1.5.0pyh
@@ -153,4 +153,4 @@ webencodings==0.5.1
 websocket-client==1.4.1
 widgetsnbextension==4.0.3
 yarl==1.9.4
-
+zipp==3.17.0
